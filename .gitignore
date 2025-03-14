@@ -1,0 +1,51 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+
+#  todo-list-app/
+#   ├── public/
+#   ├── src/
+#   │   ├── components/
+#   │   │   ├── Header.js
+#   │   │   ├── TodoForm.js
+#   │   │   ├── TodoItem.js
+#   │   │   ├── TodoList.js
+#   │   │   └── Auth/
+#   │   │       ├── Login.js
+#   │   │       └── Register.js
+#   │   ├── features/
+#   │   │   ├── todos/
+#   │   │   │   ├── todosSlice.js
+#   │   │   │   └── todoAPI.js
+#   │   │   └── auth/
+#   │   │       ├── authSlice.js
+#   │   │       └── authAPI.js
+#   │   ├── app/
+#   │   │   └── store.js
+#   │   ├── utils/
+#   │   │   └── localStorage.js
+#   │   ├── App.js
+#   │   └── index.js
+#   └── package.json
