@@ -1,0 +1,49 @@
+/* src/styles/TodoSort.css */
+.todo-sort {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding: 5px 10px;
+}
+
+.todo-sort label {
+    margin-right: 8px;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+.sort-select {
+    padding: 6px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    background-color: #fff;
+}
+
+.sort-order-toggle {
+    background: none;
+    border: 1px solid #ddd;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 1.2rem;
+    color: #3498db;
+    transition: background-color 0.2s;
+}
+
+.sort-order-toggle:hover {
+    background-color: #eef2f7;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .todo-sort {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
