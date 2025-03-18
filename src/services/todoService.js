@@ -3,14 +3,29 @@ const todoService = {
     //Chuyển đổi => mảng object đề sử dụng trong javascript
     getAll: () => {
         const todos = localStorage.getItem("todos");
-        console.log(todos);
-
         return todos ? JSON.parse(todos) : [];
     },
 
-    //Save in localStorage theo dạng chuỗi JSON
     save: (todos) => {
         localStorage.setItem("todos", JSON.stringify(todos));
+    },
+
+    formatDate: (dateString) => {
+        if (!dateString) return "";
+
+        const date = new Date(dateString);
+        return date.toLocaleDateString("vi-VN", {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+            hour: "2-digit",
+            minute: "2-digit",
+        });
+    },
+
+    isOverdue: (todo) => {
+        if (!todo.dueDate || todo.completed) return false;
+        return new Date(todo.dueDate) < new Date();
     },
 };
 

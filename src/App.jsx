@@ -4,10 +4,24 @@ import useTodos from "./hooks/useTodos";
 import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
 import TodoFilter from "./components/TodoFilter";
+import TodoSort from "./components/TodoSort";
 
 function App() {
-    const { addTodo, todos, toggleTodo, deleteTodo, filter, setFilter } =
-        useTodos();
+    const {
+        todos,
+        allTodos,
+        addTodo,
+        toggleTodo,
+        deleteTodo,
+        editTodo,
+        filter,
+        setFilter,
+        sortBy,
+        setSortBy,
+        sortOrder,
+        setSortOrder,
+    } = useTodos();
+
     return (
         <div className="todo-app">
             <header className="app-header">
@@ -20,13 +34,24 @@ function App() {
             <TodoForm addTodo={addTodo} />
 
             <div className="todo-controls">
-                <TodoFilter filter={filter} setFilter={setFilter} />
+                <TodoFilter
+                    filter={filter}
+                    setFilter={setFilter}
+                    allTodos={allTodos}
+                />
+                <TodoSort
+                    sortBy={sortBy}
+                    setSortBy={setSortBy}
+                    sortOrder={sortOrder}
+                    setSortOrder={setSortOrder}
+                />
             </div>
 
             <TodoList
                 todos={todos}
                 toggleTodo={toggleTodo}
                 deleteTodo={deleteTodo}
+                editTodo={editTodo}
             />
         </div>
     );
