@@ -1,0 +1,58 @@
+/* src/styles/TodoFilter.css */
+.todo-filter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-button {
+    background: none;
+    border: none;
+    padding: 8px 15px;
+    margin: 0 5px 5px 5px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.filter-button:hover {
+    background-color: #eef2f7;
+}
+
+.filter-button.active {
+    background-color: #3498db;
+    color: white;
+}
+
+.filter-button.active:hover {
+    background-color: #2980b9;
+}
+
+.filter-count {
+    font-size: 0.8rem;
+    background-color: #ecf0f1;
+    color: #7f8c8d;
+    border-radius: 10px;
+    padding: 2px 8px;
+    margin-left: 5px;
+}
+
+.filter-button.active .filter-count {
+    background-color: #2980b9;
+    color: #fff;
+}
+
+/* Responsive design */
+@media (max-width: 400px) {
+    .todo-filter {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filter-button {
+        margin: 5px 0;
+        width: 100%;
+    }
+}

@@ -1,0 +1,100 @@
+/* src/styles/TodoForm.css */
+.todo-form {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.todo-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.todo-input:focus {
+    border-color: #3498db;
+}
+
+.todo-submit {
+    padding: 12px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.todo-submit:hover {
+    background-color: #2980b9;
+}
+
+.todo-submit:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+.form-advanced-toggle {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.toggle-button {
+    background: none;
+    border: none;
+    color: #3498db;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-decoration: underline;
+}
+
+.form-advanced {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.todo-date-input,
+.todo-priority-select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+/* Responsive design */
+@media (max-width: 400px) {
+    .form-row {
+        flex-direction: column;
+    }
+
+    .todo-input {
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+
+    .todo-submit {
+        border-radius: 4px;
+    }
+}
